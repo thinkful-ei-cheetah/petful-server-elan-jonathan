@@ -5,7 +5,7 @@ const dogsRouter = express.Router();
 const Queue = require('../queue.js');
 
 const dogs = {
-  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjW3rKyvvviAhXQJt8KHeINBnYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.womansday.com%2Flife%2Fpet-care%2Fg26061710%2Fcute-dog-pictures%2F&psig=AOvVaw1snHQydh5JLDIIxZr9qM4e&ust=1561237860795946', 
+  imageURL:'https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260', 
   imageDescription: 'Looks like a cat, is really a dog.',
   name: 'Boo',
   sex: 'Female',

@@ -4,7 +4,7 @@ const jsonParser = express.json();
 const dogsRouter = express.Router();
 const Queue = require('../queue.js');
 
-const dogs = [{
+const dogs = {
   imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
   imageDescription: 'Looks like a cat, is really a dog.',
   name: 'Fluffy',
@@ -12,23 +12,32 @@ const dogs = [{
   age: 2,
   breed: 'Bengal Dog',
   story: 'Thrown on the street'
-},
-{
+};
+const dogs2 ={
   imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwik-t3ynPviAhVImuAKHT0rCy8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fdog%2F&psig=AOvVaw13itURQMmgb0dQwvwiLGa5&ust=1561228862684269', 
   imageDescription: 'White dog.',
   name: 'Happy',
   sex: 'Female',
-  age: 10,
+  age: 3,
   breed: 'Mutt',
   story: 'Never loved'
-}
-];
+};
+const dogs3 ={
+  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjQ5fD2qvviAhWHneAKHfvlDmgQjRx6BAgBEAU&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fdog%2F&psig=AOvVaw0OsZmX_jHdVsbpCo7vI6Lu&ust=1561232635634282', 
+  imageDescription: 'I can hear your heart melting with my giant puppy ears.',
+  name: 'Innocent',
+  sex: 'Female',
+  age: 1,
+  breed: 'Postgrestion',
+  story: 'Unknown'
+};
 
 let dogQueue = new Queue();
 dogQueue.enqueue(dogs);
-//let dogReturn = dogQueue.dequeue();
-let dogReturn = dogQueue.peek();
+dogQueue.enqueue(dogs2);
+dogQueue.enqueue(dogs3);
 
+let dogReturn = dogQueue.peek();
 
 dogsRouter
   .route('/')

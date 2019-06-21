@@ -74,7 +74,8 @@ usersRouter
       }
       userinfo = {
         count: counter,
-        nextinline: nextinline 
+        nextinline: nextinline,
+        current_user: current_time
       };
     }
     res.status(200).json(userinfo);

@@ -34,12 +34,24 @@ const cats3 = {
   story: 'Typical kitten story'
 };
 
+const cats4 = {
+  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiA4_biq_viAhXFnOAKHXswDlwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.livescience.com%2F65030-usda-kitten-cannibalism-research.html&psig=AOvVaw3dIaWNIeqOGdin9pD_jjsy&ust=1561232860089731', 
+  imageDescription: 'Typical back leg splayed posture of kitten on tile',
+  name: 'Takemehome',
+  sex: 'Male',
+  age: 1,
+  breed: 'Exotic shorthair',
+  story: 'Discovered in a kitchen'
+};
+
+
 
 let catQueue = new Queue();
 
 catQueue.enqueue(cats);
 catQueue.enqueue(cats2);
 catQueue.enqueue(cats3);
+catQueue.enqueue(cats4);
 
 catsRouter
   .route('/')

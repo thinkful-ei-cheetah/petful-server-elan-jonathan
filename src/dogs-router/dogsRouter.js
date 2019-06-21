@@ -5,13 +5,13 @@ const dogsRouter = express.Router();
 const Queue = require('../queue.js');
 
 const dogs = {
-  imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjW3rKyvvviAhXQJt8KHeINBnYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.womansday.com%2Flife%2Fpet-care%2Fg26061710%2Fcute-dog-pictures%2F&psig=AOvVaw1snHQydh5JLDIIxZr9qM4e&ust=1561237860795946', 
   imageDescription: 'Looks like a cat, is really a dog.',
-  name: 'Fluffy',
+  name: 'Boo',
   sex: 'Female',
   age: 2,
-  breed: 'Bengal Dog',
-  story: 'Thrown on the street'
+  breed: 'Boo is Boo',
+  story: 'Thug life is hard but Boo is hanging in there'
 };
 const dogs2 ={
   imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwik-t3ynPviAhVImuAKHT0rCy8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fdog%2F&psig=AOvVaw13itURQMmgb0dQwvwiLGa5&ust=1561228862684269', 

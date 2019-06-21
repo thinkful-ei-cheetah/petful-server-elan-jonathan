@@ -15,7 +15,7 @@ const cats = {
   story: 'Thrown on the street'
 };
 const cats2 = {
-  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjPzNymnfviAhUvmeAKHT03DuoQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fcat%2F&psig=AOvVaw0rt8AlD0UHvhMNTmG_fo3i&ust=1561228977845038', 
+  imageURL:'https://cdn.pixabay.com/photo/2016/03/28/10/05/kitten-1285341_960_720.jpg', 
   imageDescription: 'Cutest cat ever.',
   name: 'Scruffy',
   sex: 'Female',
@@ -25,7 +25,7 @@ const cats2 = {
 };
 
 const cats3 = {
-  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi-0732p_viAhUSm1kKHT6FAd8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.petsworld.in%2Fblog%2Fcat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html&psig=AOvVaw1wLiG787kTdF-w1nTzocAp&ust=1561231829598670', 
+  imageURL:'https://cdn.pixabay.com/photo/2016/12/18/18/42/kittens-1916542_960_720.jpg', 
   imageDescription: 'Harry and Patter sittin in a tree, K I S S I N G',
   name: 'Harry and Patter',
   sex: 'Male and Male',
@@ -35,7 +35,7 @@ const cats3 = {
 };
 
 const cats4 = {
-  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiA4_biq_viAhXFnOAKHXswDlwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.livescience.com%2F65030-usda-kitten-cannibalism-research.html&psig=AOvVaw3dIaWNIeqOGdin9pD_jjsy&ust=1561232860089731', 
+  imageURL:'https://cdn.pixabay.com/photo/2019/06/18/11/11/cat-4282096_960_720.jpg', 
   imageDescription: 'Typical back leg splayed posture of kitten on tile',
   name: 'Takemehome',
   sex: 'Male',

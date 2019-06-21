@@ -14,7 +14,7 @@ const dogs = {
   story: 'Thug life is hard but Boo is hanging in there'
 };
 const dogs2 ={
-  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwik-t3ynPviAhVImuAKHT0rCy8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fdog%2F&psig=AOvVaw13itURQMmgb0dQwvwiLGa5&ust=1561228862684269', 
+  imageURL:'https://cdn.pixabay.com/photo/2016/05/09/10/42/weimaraner-1381186_960_720.jpg', 
   imageDescription: 'White dog.',
   name: 'Happy',
   sex: 'Female',

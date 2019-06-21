@@ -6,6 +6,9 @@ const Queue = require('../queue.js');
 
 let userQueue = new Queue();
 
+let user = { entertime: '1861144072007'};
+userQueue.enqueue(user);
+
 usersRouter
   .route('/')
   .get((req, res, next) => {
@@ -14,9 +17,10 @@ usersRouter
     {
       let curr_node = userQueue.first;
       let counter = 0;
-      let nextinline = {};
+      let nextinline = null;
       while (curr_node)
       {
+        console.log(Date.now() > curr_node.data.entertime+60000)
         if (Date.now() > curr_node.data.entertime+60000)
         {
           if (curr_node.next)
@@ -45,6 +49,43 @@ usersRouter
     };
     userQueue.enqueue(users);
     res.status(200).json(users);
+  })
+  .delete(jsonParser, (req, res, next) => {
+
+    const to_delete = JSON.stringify(req.body.entertime);
+    let userinfo = {};
+    if (!userQueue.isEmpty())
+    {
+      let curr_node = userQueue.first;
+      let counter = 0;
+      let nextinline = null;
+      while (curr_node)
+      {
+        if (Date.now() > curr_node.data.entertime+60000 || to_delete===curr_node.data.entertime)
+        {
+          if (curr_node.next)
+          {
+            userQueue.first = curr_node.next;
+          } else
+          {
+            userQueue.first = null;
+          }
+        } else
+        {
+          counter++;
+          if (nextinline===null)
+          {
+            nextinline = curr_node;
+          }
+        }
+        curr_node = curr_node.next;
+      }
+      userinfo = {
+        count: counter,
+        nextinline: nextinline 
+      };
+    }
+    res.status(200).json();
   });
 
 module.exports = usersRouter;

@@ -30,7 +30,7 @@ class Queue {
     if(node === this.last) {
       this.last = null;
     }
-    this.length--
+    this.length--;
     return node.data;
   }
 

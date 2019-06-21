@@ -1,13 +1,16 @@
+/* eslint-disable strict */
 const express = require('express');
 const cors = require('cors');
-const dogsRouter = require('./dogs-router/dogsRouter')
-const catsRouter = require('./cats-router/catsRouter')
+const dogsRouter = require('./dogs-router/dogsRouter');
+const catsRouter = require('./cats-router/catsRouter');
+const usersRouter = require('./users-router/usersRouter');
 
 const app = express();
 app.use(cors());
 
-app.use('/api/dog', dogsRouter)
-app.use('/api/cat', catsRouter)
+app.use('/api/dog', dogsRouter);
+app.use('/api/cat', catsRouter);
+app.use('/api/user', usersRouter);
 
 // Catch-all 404
 app.use(function (req, res, next) {

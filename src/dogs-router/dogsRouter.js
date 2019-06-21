@@ -1,19 +1,33 @@
-const express = require('express')
-const jsonParser = express.json()
-const dogsRouter = express.Router()
+/* eslint-disable strict */
+const express = require('express');
+const jsonParser = express.json();
+const dogsRouter = express.Router();
+const Queue = require('../queue.js');
+
+const dogs = {
+  imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
+  imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+  name: 'Fluffy',
+  sex: 'Female',
+  age: 2,
+  breed: 'Bengal',
+  story: 'Thrown on the street'
+};
+
+let dogQueue = new Queue();
+dogQueue.enqueue(dogs);
+//let dogReturn = dogQueue.dequeue();
+let dogReturn = dogQueue.peek();
+
 
 dogsRouter
   .route('/')
   .get((req, res, next) => {
-    res.status(200).json({
-      imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
-      imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-      name: 'Zeus',
-      sex: 'Male',
-      age: 3,
-      breed: 'Golden Retriever',
-      story: 'Owner Passed away'
-    })
+    res.status(200).json(dogReturn);
   })
+  .delete((req, res, next) => {
+    dogQueue.dequeue();
+    res.status(200).json();
+  });
 
-module.exports = dogsRouter
+module.exports = dogsRouter;

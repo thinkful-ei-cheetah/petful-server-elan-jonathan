@@ -23,7 +23,7 @@ const dogs2 ={
   story: 'Never loved'
 };
 const dogs3 ={
-  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjQ5fD2qvviAhWHneAKHfvlDmgQjRx6BAgBEAU&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fdog%2F&psig=AOvVaw0OsZmX_jHdVsbpCo7vI6Lu&ust=1561232635634282', 
+  imageURL:'https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_960_720.jpg', 
   imageDescription: 'I can hear your heart melting with my giant puppy ears.',
   name: 'Innocent',
   sex: 'Female',
@@ -37,16 +37,17 @@ dogQueue.enqueue(dogs);
 dogQueue.enqueue(dogs2);
 dogQueue.enqueue(dogs3);
 
-let dogReturn = dogQueue.peek();
-
 dogsRouter
   .route('/')
   .get((req, res, next) => {
-    res.status(200).json(dogReturn);
+    res.status(200).json(dogQueue.peek());
   })
   .delete((req, res, next) => {
     dogQueue.dequeue();
     res.status(200).json();
   });
+
+
+  
 
 module.exports = dogsRouter;

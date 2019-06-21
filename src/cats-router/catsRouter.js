@@ -44,8 +44,6 @@ const cats4 = {
   story: 'Discovered in a kitchen'
 };
 
-
-
 let catQueue = new Queue();
 
 catQueue.enqueue(cats);

@@ -4,15 +4,25 @@ const jsonParser = express.json();
 const dogsRouter = express.Router();
 const Queue = require('../queue.js');
 
-const dogs = {
+const dogs = [{
   imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
-  imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
+  imageDescription: 'Looks like a cat, is really a dog.',
   name: 'Fluffy',
   sex: 'Female',
   age: 2,
-  breed: 'Bengal',
+  breed: 'Bengal Dog',
   story: 'Thrown on the street'
-};
+},
+{
+  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwik-t3ynPviAhVImuAKHT0rCy8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fdog%2F&psig=AOvVaw13itURQMmgb0dQwvwiLGa5&ust=1561228862684269', 
+  imageDescription: 'White dog.',
+  name: 'Happy',
+  sex: 'Female',
+  age: 10,
+  breed: 'Mutt',
+  story: 'Never loved'
+}
+];
 
 let dogQueue = new Queue();
 dogQueue.enqueue(dogs);

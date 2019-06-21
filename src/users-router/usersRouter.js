@@ -18,7 +18,7 @@ usersRouter
       while (curr_node)
       {
         //console.log(Date.now() > curr_node.data.entertime+60000)
-        if (Date.now() > curr_node.data.entertime+(60000*5))
+        if (Date.now() > curr_node.data.entertime+(3000*5))
         {
           if (curr_node.next)
           {

@@ -30,7 +30,6 @@ const cats3 = {
   name: 'Harry and Patter',
   sex: 'Male and Male',
   age: 1,
-  breed: 'Tabby',
   story: 'Typical kitten story'
 };
 

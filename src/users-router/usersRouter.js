@@ -7,8 +7,9 @@ const Queue = require('../queue.js');
 let userQueue = new Queue();
 
 let user = { entertime: '1861144072007'};
+let user2 = { entertime: '1961144072007'};
 userQueue.enqueue(user);
-
+userQueue.enqueue(user2);
 usersRouter
   .route('/')
   .get((req, res, next) => {
@@ -20,7 +21,7 @@ usersRouter
       let nextinline = null;
       while (curr_node)
       {
-        console.log(Date.now() > curr_node.data.entertime+60000)
+        //console.log(Date.now() > curr_node.data.entertime+60000)
         if (Date.now() > curr_node.data.entertime+60000)
         {
           if (curr_node.next)
@@ -48,7 +49,35 @@ usersRouter
       entertime: current_time
     };
     userQueue.enqueue(users);
-    res.status(200).json(users);
+    let userinfo = {};
+    if (!userQueue.isEmpty())
+    {
+      let curr_node = userQueue.first;
+      let counter = 0;
+      let nextinline = null;
+      while (curr_node)
+      {
+        //console.log(Date.now() > curr_node.data.entertime+60000)
+        if (Date.now() > curr_node.data.entertime+60000)
+        {
+          if (curr_node.next)
+            userQueue.first = curr_node.next;
+        } else
+        {
+          counter++;
+          if (nextinline===null)
+          {
+            nextinline = curr_node;
+          }
+        }
+        curr_node = curr_node.next;
+      }
+      userinfo = {
+        count: counter,
+        nextinline: nextinline 
+      };
+    }
+    res.status(200).json(userinfo);
   })
   .delete(jsonParser, (req, res, next) => {
 
@@ -75,7 +104,7 @@ usersRouter
           counter++;
           if (nextinline===null)
           {
-            nextinline = curr_node;
+            nextinline = curr_node.data;
           }
         }
         curr_node = curr_node.next;

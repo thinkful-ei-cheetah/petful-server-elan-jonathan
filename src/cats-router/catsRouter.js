@@ -19,15 +19,27 @@ const cats2 = {
   imageDescription: 'Cutest cat ever.',
   name: 'Scruffy',
   sex: 'Female',
-  age: 2,
+  age: 4,
   breed: 'Cutie pie',
   story: 'Unknown'
 };
+
+const cats3 = {
+  imageURL:'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi-0732p_viAhUSm1kKHT6FAd8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.petsworld.in%2Fblog%2Fcat-pictures-funny-cute-adorable-and-all-time-favorite-cat-images.html&psig=AOvVaw1wLiG787kTdF-w1nTzocAp&ust=1561231829598670', 
+  imageDescription: 'Harry and Patter sittin in a tree, K I S S I N G',
+  name: 'Harry and Patter',
+  sex: 'Male and Male',
+  age: 1,
+  breed: 'Tabby',
+  story: 'Typical kitten story'
+};
+
 
 let catQueue = new Queue();
 
 catQueue.enqueue(cats);
 catQueue.enqueue(cats2);
+catQueue.enqueue(cats3);
 
 catsRouter
   .route('/')

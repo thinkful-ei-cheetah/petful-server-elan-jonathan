@@ -6,10 +6,6 @@ const Queue = require('../queue.js');
 
 let userQueue = new Queue();
 
-let user = { entertime: '1861144072007'};
-let user2 = { entertime: '1961144072007'};
-userQueue.enqueue(user);
-userQueue.enqueue(user2);
 usersRouter
   .route('/')
   .get((req, res, next) => {
@@ -22,7 +18,7 @@ usersRouter
       while (curr_node)
       {
         //console.log(Date.now() > curr_node.data.entertime+60000)
-        if (Date.now() > curr_node.data.entertime+60000)
+        if (Date.now() > curr_node.data.entertime+(60000*5))
         {
           if (curr_node.next)
             userQueue.first = curr_node.next;

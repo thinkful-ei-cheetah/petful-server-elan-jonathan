@@ -1,11 +1,13 @@
 const express = require('express');
 const cors = require('cors');
 const dogsRouter = require('./dogs-router/dogsRouter')
+const catsRouter = require('./cats-router/catsRouter')
 
 const app = express();
 app.use(cors());
 
 app.use('/api/dog', dogsRouter)
+app.use('/api/cat', catsRouter)
 
 // Catch-all 404
 app.use(function (req, res, next) {

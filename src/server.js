@@ -1,5 +1,5 @@
 /* eslint-disable strict */
-const CLIENT_ORIGIN = require('./config.js');
+const {CLIENT_ORIGIN, PORT} = require('./config.js');
 const express = require('express');
 const cors = require('cors');
 const dogsRouter = require('./dogs-router/dogsRouter');
@@ -32,6 +32,6 @@ app.use(function (err, req, res, next) {
   });
 });
 
-app.listen(8080,()=>{
-  console.log('Serving on 8080');
+app.listen(PORT,()=>{
+  console.log('Serving on ' + PORT);
 });

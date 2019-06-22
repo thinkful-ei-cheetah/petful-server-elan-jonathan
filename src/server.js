@@ -1,4 +1,5 @@
 /* eslint-disable strict */
+const CLIENT_ORIGIN = require('./config.js');
 const express = require('express');
 const cors = require('cors');
 const dogsRouter = require('./dogs-router/dogsRouter');
@@ -6,7 +7,9 @@ const catsRouter = require('./cats-router/catsRouter');
 const usersRouter = require('./users-router/usersRouter');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: CLIENT_ORIGIN
+}));
 
 app.use('/api/dog', dogsRouter);
 app.use('/api/cat', catsRouter);

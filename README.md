@@ -1,26 +1,14 @@
-# Express Boilerplate!
+# Petful API
 
-This is a boilerplate project used for starting new projects!
+This is the supplemental API for the pet adoption project called Petful (Link to live client: ).
 
-## How do set up?
+## How do you set it up?
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+Complete the following steps to get up and running locally: 
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+1. Install the node dependencies with `npm install`.
+2. Start the server with `npm run dev`
 
 ## Scripts
 
-Start the application `npm start`
-
-Start nodemon for the application `npm run dev`
-
-Run the tests in watch mode `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+Run the tests `npm test`

@@ -1,4 +1,4 @@
-# Petful API
+# Petful API ([https://petful-server-elan-jonathan.herokuapp.com/api](https://petful-server-elan-jonathan.herokuapp.com/api))
 
 This is the supplemental API for the pet adoption project called Petful (Link to live client: [https://petful-client-elan-jonathan.jonathanlassen.now.sh/](https://petful-client-elan-jonathan.jonathanlassen.now.sh/).
 

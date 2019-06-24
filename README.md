@@ -1,6 +1,6 @@
 # Petful API
 
-This is the supplemental API for the pet adoption project called Petful (Link to live client: ).
+This is the supplemental API for the pet adoption project called Petful (Link to live client: [https://petful-client-elan-jonathan.jonathanlassen.now.sh/](https://petful-client-elan-jonathan.jonathanlassen.now.sh/).
 
 ## How do you set it up?
 
@@ -11,4 +11,4 @@ Complete the following steps to get up and running locally:
 
 ## Scripts
 
-Run the tests `npm test`
+Run the tests with `npm test`
